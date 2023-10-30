@@ -2,6 +2,7 @@ import { useState } from "react";
 import json from "./fontsize.json";
 import Indicator from "./section-indicator/indicator";
 import Clipboard from "./section-clipboard/clipboard";
+import { motion } from "framer-motion";
 
 export default function ResponsiveText() {
   const [current, setCurrent] = useState<string>("base");
@@ -25,8 +26,10 @@ export default function ResponsiveText() {
     ));
 
   return (
-    <main
-      className={`flex h-full w-full flex-col items-center justify-center gap-5`}
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={`flex h-screen flex-col items-center justify-center gap-5`}
     >
       <section
         className={`flex h-10 w-2/3 divide-x-2 divide-color1 rounded-xl bg-color3 text-color6 `}
@@ -35,6 +38,6 @@ export default function ResponsiveText() {
       </section>
       <Indicator value={twClass} />
       <Clipboard value={current} index={index} />
-    </main>
+    </motion.main>
   );
 }
