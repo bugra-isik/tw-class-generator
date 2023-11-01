@@ -1,10 +1,16 @@
 import { useState } from "react";
 import json from "./fontsize.json";
 import Indicator from "./section-indicator/indicator";
-import Clipboard from "./section-clipboard/clipboard";
-import { motion } from "framer-motion";
 
-export default function ResponsiveText() {
+import { motion } from "framer-motion";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Clipboard from "./section-clipboard/clipboard";
+
+export default function ResponsiveText({
+  setRoute,
+}: {
+  setRoute: (e: string) => void;
+}) {
   const [current, setCurrent] = useState<string>("base");
   const [twClass, setTwClass] = useState<string>("");
   const [index, setIndex] = useState<number>(12);
@@ -25,6 +31,22 @@ export default function ResponsiveText() {
       </button>
     ));
 
+  const buttonData = ["Docs", "Responsive Width"];
+
+  const buttons = buttonData.map((text, index) => (
+    <button
+      key={index}
+      className={`h-20 rounded border-2 border-color2 bg-black/0 text-sm font-semibold text-color5 drop-shadow-2xl transition-colors hover:bg-black/25 sm:text-lg md:text-2xl lg:text-sm xl:text-lg 2xl:text-2xl`}
+      onClick={() => setRoute(buttonData[index])}
+    >
+      <div className={`flex items-center justify-evenly`}>
+        {index == 0 && <BsChevronLeft />}
+        <p>{text}</p>
+        {index == 1 && <BsChevronRight />}
+      </div>
+    </button>
+  ));
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -38,6 +60,7 @@ export default function ResponsiveText() {
       </section>
       <Indicator value={twClass} />
       <Clipboard value={current} index={index} />
+      <section className={`grid w-2/3 grid-cols-2 gap-5 `}>{buttons}</section>
     </motion.main>
   );
 }

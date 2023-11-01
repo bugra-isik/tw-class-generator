@@ -5,7 +5,7 @@ export default function Docs({
   setSelfDestruction: (e: boolean) => void;
   setRoute: (e: string) => void;
 }) {
-  const buttonData = ["Responsive Text", "Responsive Dimensions"];
+  const buttonData = ["Responsive Width", "Responsive Text"];
 
   const buttons = buttonData.map((text, index) => (
     <button
@@ -21,10 +21,10 @@ export default function Docs({
   ));
 
   return (
-    <main id="doc" className={`h-screen px-80 pt-40`}>
+    <main id="doc" className={`h-screen px-80 pt-40 text-white`}>
       <section>
         <h1
-          className={`mb-5 text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl 2xl:text-5xl`}
+          className={`mb-5  text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl 2xl:text-5xl`}
         >
           Get started with Responsive Class Generator
         </h1>

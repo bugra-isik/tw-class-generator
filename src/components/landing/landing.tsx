@@ -16,7 +16,7 @@ export default function Landing() {
       <motion.a
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5, delay: 2 } }}
-        className={`z-10 rounded-lg bg-color7 px-10 py-5 text-xl font-semibold text-color3 transition-colors hover:bg-color7/75 `}
+        className={`z-10 rounded-lg bg-color7  px-10 py-5 text-xl font-semibold text-color3 transition-colors hover:bg-color7/75 `}
         href="#doc"
       >
         Get started
