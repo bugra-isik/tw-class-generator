@@ -70,17 +70,21 @@ export default function ResponsiveWidth({
     <main className={`flex h-screen flex-col items-center justify-center`}>
       <section className={`flex w-2/3 justify-between`}>
         <div
-          className={`grid h-[30rem] w-[30rem] select-none grid-cols-5 place-items-center bg-color2`}
+          className={`grid select-none grid-cols-5 place-items-center bg-color2 lg:h-[20rem] lg:w-[20rem] xl:h-[25rem] xl:w-[25rem] 2xl:h-[30rem] 2xl:w-[30rem]`}
         >
           {gridItems}
         </div>
         <div
-          className={`flex h-[30rem] w-[30rem] items-center justify-center bg-color2`}
+          className={`flex items-center justify-center bg-color2 lg:h-[20rem] lg:w-[20rem] xl:h-[25rem] xl:w-[25rem] 2xl:h-[30rem] 2xl:w-[30rem]`}
         >
-          <div className={`${wArr && current} h-96 bg-color7`} />
+          <div className={`${wArr && current} h-full bg-color7`} />
         </div>
       </section>
-      <section className={`grid w-2/3 grid-cols-2 gap-5 `}>{buttons}</section>
+      <section
+        className={`absolute bottom-0 mb-10 grid w-2/3 grid-cols-2 gap-5`}
+      >
+        {buttons}
+      </section>
     </main>
   );
 }

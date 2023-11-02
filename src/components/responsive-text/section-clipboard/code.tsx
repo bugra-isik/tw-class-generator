@@ -29,7 +29,7 @@ const div = (index: number) => {
   ];
 
   return (
-    <code className={`flex`}>
+    <code className={`flex text-xs sm:text-base md:text-xl lg:text-xs xl:text-base 2xl:text-xl`}>
       <p className={`text-color8`}>{"<"}</p>
       <p className={`text-color7`}>{"div"}</p>
       <p className={`pl-5 text-color6`}>{"className"}</p>

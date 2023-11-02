@@ -9,7 +9,7 @@ export default function CopyButton({ value }: { value: string[] | undefined }) {
 
   return (
     <button
-      className={`absolute right-2 top-2 flex w-24 cursor-copy items-center justify-center gap-2 rounded border border-color8 px-1 py-1 text-base text-color8 transition hover:bg-color8/25 hover:text-color3`}
+      className={`absolute right-2 top-2 flex w-24 cursor-copy items-center justify-center gap-2 rounded border border-color8 px-1 py-1 text-color8 transition hover:bg-color8/25 hover:text-color3 lg:text-xs xl:text-sm 2xl:text-base`}
       onClick={() => {
         value && copyToClipboard(value.join(" "));
         setToggle(false);

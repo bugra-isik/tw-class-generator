@@ -13,7 +13,7 @@ export default function Clipboard({
   return (
     <section
       className={`relative flex h-1/5 w-2/3 select-none items-center justify-center rounded-xl
-     border border-color2 bg-color3 text-xl`}
+     border border-color2 bg-color3 text-xl overflow-hidden`}
     >
       <CopyButton value={textArray.props.children[10].props.children} />
       {value == "" ? (
