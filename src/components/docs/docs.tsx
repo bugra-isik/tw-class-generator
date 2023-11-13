@@ -10,7 +10,7 @@ export default function Docs({
   const buttons = buttonData.map((text, index) => (
     <button
       key={index}
-      className={`h-20 rounded border-2 border-color2 bg-black/0 text-sm font-semibold text-color5 drop-shadow-2xl transition-colors hover:bg-black/25 sm:text-lg md:text-2xl lg:text-sm xl:text-lg 2xl:text-2xl`}
+      className={`h-20 rounded border-2 border-color2 bg-black/25 text-sm font-semibold text-color5 drop-shadow-2xl transition-colors hover:bg-black/10 sm:text-lg md:text-2xl lg:text-sm xl:text-lg 2xl:text-2xl`}
       onClick={(e) => {
         setSelfDestruction(false);
         setRoute(e.currentTarget.innerText);
